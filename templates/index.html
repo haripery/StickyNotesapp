@@ -1,0 +1,50 @@
+<html>
+<head>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='stickystyle.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Shadows+Into+Light" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans|Shadows+Into+Light" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+    <script src="{{ url_for('static',filename='jquery-3.2.1.js') }}"></script>
+    <script type=text/javascript>
+        $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+    </script>
+
+</head>
+<body>
+    <div id="header">
+        <h1>POST-IT Notes ( MGH ) </h1>
+    </div>
+    <div id="main-wrap">
+        <div id="sidebar">
+        <form action="/" method = 'post'>
+            <div id="stickyinput">
+                <div id="onlybutton">
+                    <select id="dropdown" name="color">
+                        <option value="yellow">yellow</option>
+                        <option value="pink">pink</option>
+                        <option value="orange">orange</option>
+                    </select>
+                <button id="button" value="yellow">+</button>
+                </div>
+                <div id="sticky"><input type ='text' maxlength="17" name='notes'></div>
+            </div>
+        </form>
+        </div>
+        <div id="content-wrap">
+            <ul class="sticky_notes">
+                {% for note in notes %}
+                 <li id="{{ note.id }}" style="background-color:{{ note.color }}">
+                     <form action="/deletenotes/{{ note.id }}">
+                         <button class="fa fa-trash"></button>
+                     </form>
+                     <span></span>{{ note.note }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div id="footer">
+        <p>Created by Hari(MGH)</p>
+    </div>
+<script src="{{ url_for('static',filename='stickyscript.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+/* colors */
+	#header,
+	#footer {
+		background-color: #f1f1f1;
+	}
+
+	#main-wrap {
+		background-color: #D9D9D9;
+	}
+
+	#sidebar {
+		background-color: #d2d2d2;
+	}
+
+	#content-wrap {
+		background-color: #c5c5c5;
+	}
+
+/* sizes */
+	#main-wrap > div {
+		min-height: 450px;
+	}
+
+
+	#header,
+	#footer {
+		min-height: 40px;
+	}
+    #main-wrap > div { min-height: 450px; }
+
+
+	#header,
+	#footer {
+	    min-height: 40px;
+        margin: auto;
+	}
+
+/* layout */
+	#main-wrap {
+	    /* overflow to handle inner floating block */
+	    overflow: hidden;
+	}
+
+	#sidebar {
+	    float: left;
+	    width: 15%;
+
+
+	}
+
+	#content-wrap {
+	    float: right;
+	    width: 85%;
+	}
+
+/* Internal Style*/
+    h1{
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    }
+
+
+	#onlybutton{
+		border: 3px solid rgba(0,0,0,0);
+		box-shadow: 0 0 3px rgba(0,0,0, 0.1);
+	}
+
+    input{
+    font-size: 18px;
+	background-color: yellow;
+    font-family: 'Indie Flower', cursive;
+	padding: 10% 10% 10% 10%;
+    height:200px;
+	box-sizing: border-box;
+	border: 3px solid rgba(0,0,0,0);
+	box-shadow: 0 0 3px rgba(0,0,0, 0.1);
+    width: 100%;
+    }
+
+	input:focus{
+		background: yellow;
+		outline: none;
+	}
+
+	#stickyinput{
+		background-color:white;
+    	padding: 2px 2px 2px 2px;
+    	width: 100%;
+		border: 1px solid rgba(0,0,0,0);
+	}
+
+	ul li{
+	  list-style:none;
+		font-family: 'Indie Flower', cursive;
+		color: #2980b9;
+		box-shadow: 0 0 3px rgba(0,0,0, 0.1);
+
+	}
+	ul{
+	  overflow:hidden;
+	  padding:1em;
+	}
+
+	ul li {
+	  text-decoration:none;
+	  color:#000;
+	  background:yellow;
+	  display:block;
+	  height:10em;
+	  width:10em;
+	  padding:1em;
+
+	}
+
+	ul li{
+	  margin:1em;
+	  float:left;
+	}
+
+	#footer{
+		text-align: right;
+		padding: 0.1% 0.1% 0.1% 0.1%;
+	}
