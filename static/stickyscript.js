@@ -1,6 +1,6 @@
 var stickyColor;
 var noteid;
-
+/* Selecting Color*/
 $( "#dropdown" ).change(function() {
     if($("#dropdown").val()==="pink"){
         //$(this).css({"background-color": "pink"});

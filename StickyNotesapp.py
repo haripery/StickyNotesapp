@@ -6,7 +6,7 @@ app = Flask(__name__)
 list_icon = "fa fa-trash-o"
 notes = []
 
-
+#Class Object Creation
 class AddNotes:
     count = 0
 
@@ -19,7 +19,7 @@ class AddNotes:
     def __str__(self):
         return self.color, self.note, self.id
 
-
+#Delete Notes
 @app.route('/deletenotes/<int:id>',methods=['POST','GET'])
 def delete(id):
     for index, note in enumerate(notes):
@@ -27,6 +27,7 @@ def delete(id):
             notes.pop(index)
     return render_template('index.html', notes=notes)
 
+#Add Notes
 @app.route('/', methods=['POST', 'GET'])
 def insert_notes():
     if request.method == 'POST':
@@ -46,7 +47,7 @@ def insert_notes():
             print(notes)
     return render_template('index.html', notes=notes)
 
-
+#Clearinf Browser Cache
 @app.context_processor
 def override_url_for():
     return dict(url_for=dated_url_for)
