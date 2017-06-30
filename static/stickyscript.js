@@ -40,9 +40,3 @@ $( "#dropdown" ).change(function() {
 	});*/
 
 /*
-$(function() {
-			  $("ul").on("click", "span", function(event){
-			    $.getJSON('/delete', {noteid:noteid});
-			  });
-			});
-*/
